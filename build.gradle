@@ -1,0 +1,18 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    id 'org.sonarqube' version '4.0.0.2929'
+}
+sonarqube {
+    properties {
+        property "sonar.projectKey", "task6" // Your Project Name
+        property "sonar.host.url", "http://localhost:9000" // SonarQube URL
+        property 'sonar.token', 'sqp_0afe9972009c6d94c269fdc3780d46127b7c008c'
+        property "sonar.language", "java"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.sources", "src/main/java"
+        property "sonar.junit.reportPaths", "app/build/test-results/testDebugUnitTest"
+        property "sonar.androidTest.reportPaths", "app/build/reports/androidTests/connected/debug"
+    }
+}
