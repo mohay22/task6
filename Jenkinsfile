@@ -80,8 +80,7 @@ pipeline {
 
     post {
         always {
-            // Updated to reflect correct test report path
-          junit 'app/build/test-results/testDebugUnitTest/*.xml'
+            junit 'app/build/test-results/testDebugUnitTest/*.xml
             archiveArtifacts artifacts: 'app/build/outputs/**/*.apk', fingerprint: true
         }
         success {
