@@ -53,7 +53,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    withCredentials([string(credentialsId: 'sqp_0afe9972009c6d94c269fdc3780d46127b7c008c', variable: 'SONAR_LOGIN')]) {
+                    withCredentials([string(credentialsId: 'sqp_ad3f68c36471e6523cd9e6426e55a05a97cffb69', variable: 'SONAR_LOGIN')]) {
                         script {
                             // Temporarily echo the SonarQube token for debugging (Remove this in production)
                             echo "The SonarQube token is: ${SONAR_LOGIN}"
